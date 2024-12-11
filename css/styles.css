@@ -123,6 +123,7 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #ffffff;
+    padding: 0;
 }
 
 /* SECTION 3 */
@@ -373,7 +374,12 @@ img {
 }
 
 /* MEDIA SCREEN */
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 1023px;
+        padding: 0;
+    }
+
     .ul-nav {
         flex-direction: column;
         gap: 0;
@@ -399,8 +405,10 @@ img {
 
     .footer {
         padding: 50px 0;
-        max-width: 768px;
-        min-width: 767px;
+        max-width: 1023px;
+        min-width: 768px;
+        padding-bottom: 24px;
+        padding-left: 12px;
     }
 
     .container {
@@ -415,21 +423,54 @@ img {
 
     .footer-container {
         margin-right: 100px;
-    }
+    } 
 }
 
-@media screen and (max-width: 500px) {
+@media (min-width: 305px) and (max-width: 767px){
+    .container {
+        min-width: 320px;
+        max-width: 767px;
+        padding: 0;
+    }
     .hidden {
         display: none;
     }
 
+    .page-hero {
+        max-width: 767px;
+        min-width: 320px;
+    }
+
     .text-hero {
         max-width: 450px;
-        min-width: 390px;
+        min-width: 320px;
+        font-size: 35px;
+    }
+
+    .section-three {
+        padding: 80px 0;
+    }
+
+    .li-oferta {
+        width: 290px;
+    }
+
+    .img-oferta {
+        height: 290px;
+        width: 290px;
+    }
+
+    .text-overlay {
+        padding: 12px 24px;
+        width: 260px;
     }
 
     .footer {
-        min-width: 450px;
+        min-width: 305px;
+        max-width: 767px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 12px;
     }
 
     .page-footer {
@@ -442,5 +483,5 @@ img {
 
     .ul-social {
         flex-direction: row;
-    }
+    } 
 }
